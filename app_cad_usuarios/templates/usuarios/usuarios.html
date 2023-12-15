@@ -1,0 +1,21 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+
+<div class="container">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>id</th>
+            <th>nome</th>
+            <th>idade</th>
+        </tr>
+        {% for valor in usuarios %}
+        <tr>
+            <td>{{valor.id_usuario}}</td>
+            <td>{{valor.nome}}</td>
+            <td>{{valor.idade}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}
